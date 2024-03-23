@@ -27,12 +27,18 @@ const CanvasModel = () => {
               style={{width: '100vw', height: '90vh'}}
               {...fadeAnimation}
             >
-              <Canvas>
-                <ambientLight intensity={0.5} />
+              <Canvas 
+              shadows 
+              camera={{ position: [0, 0, 5], fov: 30 }}
+              gl={{ preserveDrawingBuffer: true }}
+              className="w-full h-full max-w-full transition-all ease-in"
+              >
+                {/* <meshStandardMaterial color="hotpink" /> */}
+                <ambientLight intensity={1} />
                 <Environment preset={"city"} />
 
                 <CameraRig>
-              {/* <Backdrop /> */}
+                <Backdrop />
                 <Center>
                   <Shirt />
                 </Center>
