@@ -34,10 +34,10 @@ const cameraRig = ({ children }) => {
     group.current.position,
     [
       state.pointer.x / 10, // Spring will move towards this value, Pointer X position is the target value
-      -state.pointer.x / 5, // Negative value to simulate a delay in the movement, Target value of the delayed movement
+      -state.pointer.x / 10, // Negative value to simulate a delay in the movement, Target value of the delayed movement
       0
     ],
-    0.25, // Spring constant (how much the spring resists movement)
+    0.28, // Spring constant (how much the spring resists movement)
     delta // Delta time (amount of time that has passed since last frame)
   )
 

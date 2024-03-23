@@ -24,12 +24,13 @@ const CanvasModel = () => {
           <AnimatePresence >
             <motion.div
               key={Date.now() + 2}
-              style={{width: '100vw', height: '90vh'}}
+              // style={{width: '100vw', height: '90vh'}}
+              style={{width: '100vw', height: '100vh'}}
               {...fadeAnimation}
             >
               <Canvas 
               shadows 
-              camera={{ position: [0, 0, 5], fov: 30 }}
+              camera={{ position: [0, 0, 5], fov: 25 }}
               gl={{ preserveDrawingBuffer: true }}
               className="w-full h-full max-w-full transition-all ease-in"
               >
